@@ -1,0 +1,43 @@
+:root{
+--bg: #0b0f0e;
+--surface: #101615;
+--card: #131b1a;
+--text: #eaf5f1;
+--muted: #bcd3cb;
+--primary: #38d39f; /* verde água */
+--primary-2: #9df6cb; /* degradê leve */
+--shadow: 0 10px 30px rgba(0,0,0,.35);
+--radius: 16px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+margin:0; font-family: Poppins, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, 'Helvetica Neue', Arial, sans-serif;
+color:var(--text); background:linear-gradient(180deg, #0a1311, #0b0f0e 40%);
+}
+img{max-width:100%; display:block}
+.container{width:min(1100px, 92%); margin-inline:auto}
+.row{display:flex; gap:16px}
+.center-between{align-items:center; justify-content:space-between}
+
+
+/* Topbar */
+.topbar{position:sticky; top:0; z-index:10; backdrop-filter:saturate(150%) blur(10px); background:rgba(11,15,14,.6); border-bottom:1px solid rgba(255,255,255,.06)}
+.logo{display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--text); font-weight:700}
+.menu a{color:var(--muted); text-decoration:none; margin-left:18px; font-weight:600}
+.menu a:hover{color:var(--text)}
+
+
+/* Hero */
+.hero{position:relative; min-height:68vh; display:grid; align-items:center}
+.hero-bg{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; filter:brightness(.55) saturate(1.1)}
+.hero-content{position:relative; padding:80px 0}
+.hero h1{font-size:clamp(28px, 5vw, 48px); margin:0 0 10px}
+.hero p{max-width:60ch; color:var(--muted); margin:0 0 24px}
+
+
+.gradient{background:linear-gradient(90deg, var(--primary), var(--primary-2)); -webkit-background-clip:text; background-clip:text; color:transparent}
+
+
+.btn{display:inline-block; padding:12px 20px; border-radius:999px; text-decoration:none; font-weight:700; border:1px solid transparent; cursor:pointer}
+.btn-primary{background:linear-gradient(90deg, var(--primary),
